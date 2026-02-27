@@ -23,7 +23,7 @@ const config = {
   url: 'https://chenqi1551.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/hg-docusaurus-public-deoloy-github/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -38,8 +38,27 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-CN',
+    locales: ['en', 'fr', 'zh-CN', 'ja'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr', // 从左到右
+      },
+      fr: {
+        label: 'Français',
+        direction: 'ltr',
+      },
+      'zh-CN': {
+        label: '中文',
+        direction: 'ltr',
+      },
+      ja: {
+        label: '日本語',
+        direction: 'ltr',
+      },
+    },
+
   },
 
   presets: [
@@ -95,7 +114,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '文档',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -112,7 +131,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: '文档',
                 to: '/docs/intro',
               },
             ],
